@@ -9,10 +9,7 @@ namespace ToBeLifeBetter.Service.Entity
     public class BaseEntity
     {
         public long Id { get; set; }
-
-        public bool IsDeleted  { get; set; }
-
-        public DateTime CreateDataTime { get; set; }
-
+        public DateTime CreateDateTime { get; set; } = DateTime.Now;
+        public bool IsDeleted { get; set; } = false;
     }
 }

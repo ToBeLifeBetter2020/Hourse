@@ -1,0 +1,7 @@
+D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\bin\Debug\Test.exe.config
+D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\bin\Debug\Test.exe
+D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\bin\Debug\Test.pdb
+D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\obj\Debug\Test.csprojAssemblyReference.cache
+D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\obj\Debug\Test.exe
+D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\obj\Debug\Test.pdb

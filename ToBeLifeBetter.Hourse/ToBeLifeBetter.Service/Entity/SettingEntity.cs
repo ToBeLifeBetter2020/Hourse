@@ -10,14 +10,14 @@ namespace ToBeLifeBetter.Service.Entity
     /// 系统配置实体
     /// 一些相关配置的实体 ，该映射表替代配置文件
     /// </summary>
-    public class SettingEntity:BaseEntity
+    public class SettingEntity : BaseEntity
     {
-       
+
         public string Name { get; set; }
 
         public string Value { get; set; }
 
-          
+
 
     }
 }

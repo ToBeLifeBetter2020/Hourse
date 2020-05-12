@@ -10,6 +10,15 @@ namespace ToBeLifeBetter.Admin.Web.Controllers
     {
         public ActionResult Index()
         {
+            //if (Session["Id"] != null)
+            //{
+            //    return Content(Session["Id"].ToString());
+            //}
+            //else
+            //{
+            //    Session["Id"] = "123";
+            //}
+
             return View();
         }
 

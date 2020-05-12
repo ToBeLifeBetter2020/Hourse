@@ -14,7 +14,7 @@ namespace ToBeLifeBetter.Service.Entity
 
         public string Name { get; set; }
 
-        public int CityId { get; set; }
+        public long CityId { get; set; }
 
         //一个区域对应一个城市
         public virtual CityEntity City { get; set; }

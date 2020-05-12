@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+ 
+using ToBeLifeBetter.Service;
 
 namespace Test
 {
@@ -13,11 +15,25 @@ namespace Test
 
         static void Main(string[] args)
         {
+           // ToBeLifeBetter.LogEasy.LogHelper.Info("{0}");
+
+            using (SQLDbContext db = new SQLDbContext())
+            {
+
+                db.Database.Delete();
+                db.Database.Create();
+            }
+        }
+
+
+
+        static void Main2(string[] args)
+        {
             Thread thread = new Thread(() =>
             {
                 while (true)
                 {
-                    
+
                     dicList[DateTime.Now.ToString()] = DateTime.Now.ToString();
                 }
             });

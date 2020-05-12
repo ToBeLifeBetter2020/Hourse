@@ -5,3 +5,14 @@ D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\obj\Debug\Test.csprojAssemblyReference
 D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
 D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\obj\Debug\Test.exe
 D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\obj\Debug\Test.pdb
+D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\bin\Debug\EntityFramework.dll
+D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\bin\Debug\EntityFramework.SqlServer.dll
+D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\bin\Debug\ToBeLifeBetter.Service.dll
+D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\bin\Debug\log4net.dll
+D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\bin\Debug\ToBeLifeBetter.LogEasy.dll
+D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\bin\Debug\ToBeLifeBetter.Service.pdb
+D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\bin\Debug\ToBeLifeBetter.Service.dll.config
+D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\bin\Debug\EntityFramework.xml
+D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\bin\Debug\EntityFramework.SqlServer.xml
+D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\bin\Debug\log4net.xml
+D:\Code\Hourse\ToBeLifeBetter.Hourse\Test\obj\Debug\Test.csproj.CopyComplete

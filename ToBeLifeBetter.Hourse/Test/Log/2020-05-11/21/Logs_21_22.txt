@@ -1,0 +1,2 @@
+2020-05-11 21:22:29,113 [1] INFO  ToBeLifeBetter.LogEasy.LogHelper - aa
+2020-05-11 21:22:42,714 [1] INFO  ToBeLifeBetter.LogEasy.LogHelper - {0}

@@ -1,0 +1,704 @@
+2020-05-11 21:24:58,191 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：Opened connection at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,231 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：Started transaction at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,240 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE TABLE [dbo].[T_AdminLogs] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [Message] [nvarchar](max) NOT NULL,
+    [AdminUserId] [bigint] NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_AdminLogs] PRIMARY KEY ([Id])
+)
+2020-05-11 21:24:58,240 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,241 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,276 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 31 ms with result: -1
+
+2020-05-11 21:24:58,276 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,276 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE TABLE [dbo].[T_Users] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [PhoneNumber] [varchar](20) NOT NULL,
+    [PasswordHash] [nvarchar](100) NOT NULL,
+    [PasswordSalt] [nvarchar](20) NOT NULL,
+    [LoginErrorTimes] [nvarchar](max),
+    [LoginErrorDateTime] [datetime],
+    [CityId] [bigint] NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_Users] PRIMARY KEY ([Id])
+)
+2020-05-11 21:24:58,276 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,276 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,293 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 17 ms with result: -1
+
+2020-05-11 21:24:58,293 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,293 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE TABLE [dbo].[T_Cities] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [Name] [nvarchar](20) NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_Cities] PRIMARY KEY ([Id])
+)
+2020-05-11 21:24:58,293 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,293 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,308 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 13 ms with result: -1
+
+2020-05-11 21:24:58,308 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,308 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE TABLE [dbo].[T_AdminUsers] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [Name] [nvarchar](50) NOT NULL,
+    [PhoneNumber] [varchar](20) NOT NULL,
+    [PasswordSalt] [varchar](20) NOT NULL,
+    [PasswordHash] [varchar](100) NOT NULL,
+    [Email] [varchar](30) NOT NULL,
+    [CityId] [bigint],
+    [LoginErrorTimes] [int] NOT NULL,
+    [LastLoginErrorDataTimes] [datetime],
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    [RoleEntity_Id] [bigint],
+    CONSTRAINT [PK_dbo.T_AdminUsers] PRIMARY KEY ([Id])
+)
+2020-05-11 21:24:58,308 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,309 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,324 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 15 ms with result: -1
+
+2020-05-11 21:24:58,324 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,324 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE TABLE [dbo].[T_Roles] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [Name] [nvarchar](50) NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_Roles] PRIMARY KEY ([Id])
+)
+2020-05-11 21:24:58,324 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,324 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,341 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 15 ms with result: -1
+
+2020-05-11 21:24:58,341 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,341 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE TABLE [dbo].[T_Permissions] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [Description] [nvarchar](1024),
+    [Name] [nvarchar](50) NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_Permissions] PRIMARY KEY ([Id])
+)
+2020-05-11 21:24:58,341 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,341 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,356 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 15 ms with result: -1
+
+2020-05-11 21:24:58,356 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,356 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE TABLE [dbo].[T_Attachments] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [Name] [nvarchar](50) NOT NULL,
+    [IconName] [varchar](50) NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_Attachments] PRIMARY KEY ([Id])
+)
+2020-05-11 21:24:58,356 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,356 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,373 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 16 ms with result: -1
+
+2020-05-11 21:24:58,373 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,373 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE TABLE [dbo].[T_Houses] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [CommunityId] [bigint] NOT NULL,
+    [RoomTypeId] [bigint] NOT NULL,
+    [Address] [nvarchar](128) NOT NULL,
+    [MonthRent] [int] NOT NULL,
+    [StatusId] [bigint] NOT NULL,
+    [Area] [int] NOT NULL,
+    [DecorateStatusId] [bigint] NOT NULL,
+    [TotalFloorCount] [int] NOT NULL,
+    [FloorIndex] [int] NOT NULL,
+    [TypeId] [bigint] NOT NULL,
+    [Direction] [nvarchar](20) NOT NULL,
+    [LookableDateTime] [datetime] NOT NULL,
+    [CheckInDateTime] [datetime] NOT NULL,
+    [OwenName] [nvarchar](20) NOT NULL,
+    [OwenPhoneNumber] [varchar](20) NOT NULL,
+    [Description] [nvarchar](max),
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_Houses] PRIMARY KEY ([Id])
+)
+2020-05-11 21:24:58,373 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,373 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,390 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 16 ms with result: -1
+
+2020-05-11 21:24:58,390 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,390 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE TABLE [dbo].[T_Communities] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [Name] [nvarchar](20) NOT NULL,
+    [RegionId] [bigint] NOT NULL,
+    [Location] [nvarchar](1024) NOT NULL,
+    [Traffic] [nvarchar](max),
+    [BuiltYear] [int] NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_Communities] PRIMARY KEY ([Id])
+)
+2020-05-11 21:24:58,390 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,390 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,405 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 15 ms with result: -1
+
+2020-05-11 21:24:58,405 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,406 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE TABLE [dbo].[T_Regions] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [Name] [nvarchar](50) NOT NULL,
+    [CityId] [bigint] NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_Regions] PRIMARY KEY ([Id])
+)
+2020-05-11 21:24:58,406 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,406 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,431 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 25 ms with result: -1
+
+2020-05-11 21:24:58,431 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,432 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE TABLE [dbo].[T_IdNames] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [TypeName] [nvarchar](1024) NOT NULL,
+    [Name] [nvarchar](1024) NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_IdNames] PRIMARY KEY ([Id])
+)
+2020-05-11 21:24:58,432 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,432 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,450 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 18 ms with result: -1
+
+2020-05-11 21:24:58,451 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,451 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE TABLE [dbo].[T_HousePics] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [Url] [nvarchar](1024) NOT NULL,
+    [ThumbUrl] [nvarchar](1024) NOT NULL,
+    [HouseId] [bigint] NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_HousePics] PRIMARY KEY ([Id])
+)
+2020-05-11 21:24:58,451 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,451 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,470 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 18 ms with result: -1
+
+2020-05-11 21:24:58,470 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,470 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE TABLE [dbo].[T_HouseAppointments] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [UserId] [bigint] NOT NULL,
+    [Name] [nvarchar](20) NOT NULL,
+    [PhoneNumber] [varchar](20) NOT NULL,
+    [VisitDateTime] [datetime] NOT NULL,
+    [HouseId] [bigint] NOT NULL,
+    [Status] [nvarchar](20) NOT NULL,
+    [FollowAdminUserId] [bigint],
+    [FollowDateTime] [datetime],
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_HouseAppointments] PRIMARY KEY ([Id])
+)
+2020-05-11 21:24:58,470 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,470 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,489 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 18 ms with result: -1
+
+2020-05-11 21:24:58,489 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,489 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE TABLE [dbo].[T_Settings] (
+    [Id] [bigint] NOT NULL IDENTITY,
+    [Name] [nvarchar](1024) NOT NULL,
+    [Value] [nvarchar](max) NOT NULL,
+    [CreateDateTime] [datetime] NOT NULL,
+    [IsDeleted] [bit] NOT NULL,
+    CONSTRAINT [PK_dbo.T_Settings] PRIMARY KEY ([Id])
+)
+2020-05-11 21:24:58,489 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,489 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,507 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 17 ms with result: -1
+
+2020-05-11 21:24:58,507 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,507 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE TABLE [dbo].[T_RolePermissions] (
+    [RoleId] [bigint] NOT NULL,
+    [PermissionId] [bigint] NOT NULL,
+    CONSTRAINT [PK_dbo.T_RolePermissions] PRIMARY KEY ([RoleId], [PermissionId])
+)
+2020-05-11 21:24:58,507 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,508 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,526 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 18 ms with result: -1
+
+2020-05-11 21:24:58,526 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,527 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE TABLE [dbo].[T_T_AdminUserRoles] (
+    [AdminUserId] [bigint] NOT NULL,
+    [RoleId] [bigint] NOT NULL,
+    CONSTRAINT [PK_dbo.T_T_AdminUserRoles] PRIMARY KEY ([AdminUserId], [RoleId])
+)
+2020-05-11 21:24:58,527 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,527 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,547 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 20 ms with result: -1
+
+2020-05-11 21:24:58,547 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,548 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE TABLE [dbo].[T_HouseAttachments] (
+    [AttachmentId] [bigint] NOT NULL,
+    [HouseId] [bigint] NOT NULL,
+    CONSTRAINT [PK_dbo.T_HouseAttachments] PRIMARY KEY ([AttachmentId], [HouseId])
+)
+2020-05-11 21:24:58,548 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,548 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,568 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 20 ms with result: -1
+
+2020-05-11 21:24:58,569 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,569 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_AdminUserId] ON [dbo].[T_AdminLogs]([AdminUserId])
+2020-05-11 21:24:58,569 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,569 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,586 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 17 ms with result: -1
+
+2020-05-11 21:24:58,587 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,587 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_CityId] ON [dbo].[T_Users]([CityId])
+2020-05-11 21:24:58,587 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,587 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,603 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 15 ms with result: -1
+
+2020-05-11 21:24:58,603 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,603 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_CityId] ON [dbo].[T_AdminUsers]([CityId])
+2020-05-11 21:24:58,603 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,603 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,619 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 15 ms with result: -1
+
+2020-05-11 21:24:58,619 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,619 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_RoleEntity_Id] ON [dbo].[T_AdminUsers]([RoleEntity_Id])
+2020-05-11 21:24:58,619 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,620 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,635 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 15 ms with result: -1
+
+2020-05-11 21:24:58,635 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,635 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_CommunityId] ON [dbo].[T_Houses]([CommunityId])
+2020-05-11 21:24:58,635 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,635 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,651 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 16 ms with result: -1
+
+2020-05-11 21:24:58,651 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,652 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_RoomTypeId] ON [dbo].[T_Houses]([RoomTypeId])
+2020-05-11 21:24:58,652 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,652 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,668 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 16 ms with result: -1
+
+2020-05-11 21:24:58,669 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,669 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_StatusId] ON [dbo].[T_Houses]([StatusId])
+2020-05-11 21:24:58,669 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,669 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,686 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 16 ms with result: -1
+
+2020-05-11 21:24:58,686 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,686 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_DecorateStatusId] ON [dbo].[T_Houses]([DecorateStatusId])
+2020-05-11 21:24:58,686 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,686 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,702 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 15 ms with result: -1
+
+2020-05-11 21:24:58,702 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,702 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_TypeId] ON [dbo].[T_Houses]([TypeId])
+2020-05-11 21:24:58,702 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,703 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,718 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 15 ms with result: -1
+
+2020-05-11 21:24:58,718 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,718 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_RegionId] ON [dbo].[T_Communities]([RegionId])
+2020-05-11 21:24:58,718 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,718 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,736 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 17 ms with result: -1
+
+2020-05-11 21:24:58,736 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,736 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_CityId] ON [dbo].[T_Regions]([CityId])
+2020-05-11 21:24:58,736 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,736 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,753 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 16 ms with result: -1
+
+2020-05-11 21:24:58,753 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,753 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_HouseId] ON [dbo].[T_HousePics]([HouseId])
+2020-05-11 21:24:58,753 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,753 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,774 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 20 ms with result: -1
+
+2020-05-11 21:24:58,774 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,774 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_UserId] ON [dbo].[T_HouseAppointments]([UserId])
+2020-05-11 21:24:58,774 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,774 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,794 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 19 ms with result: -1
+
+2020-05-11 21:24:58,795 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,795 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_HouseId] ON [dbo].[T_HouseAppointments]([HouseId])
+2020-05-11 21:24:58,795 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,795 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,813 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 17 ms with result: -1
+
+2020-05-11 21:24:58,813 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,813 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_FollowAdminUserId] ON [dbo].[T_HouseAppointments]([FollowAdminUserId])
+2020-05-11 21:24:58,813 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,813 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,829 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 15 ms with result: -1
+
+2020-05-11 21:24:58,829 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,829 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_RoleId] ON [dbo].[T_RolePermissions]([RoleId])
+2020-05-11 21:24:58,829 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,829 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,847 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 17 ms with result: -1
+
+2020-05-11 21:24:58,847 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,847 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_PermissionId] ON [dbo].[T_RolePermissions]([PermissionId])
+2020-05-11 21:24:58,847 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,847 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,864 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 17 ms with result: -1
+
+2020-05-11 21:24:58,865 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,865 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_AdminUserId] ON [dbo].[T_T_AdminUserRoles]([AdminUserId])
+2020-05-11 21:24:58,865 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,865 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,883 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 18 ms with result: -1
+
+2020-05-11 21:24:58,883 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,883 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_RoleId] ON [dbo].[T_T_AdminUserRoles]([RoleId])
+2020-05-11 21:24:58,883 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,883 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,899 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 15 ms with result: -1
+
+2020-05-11 21:24:58,899 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,899 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_AttachmentId] ON [dbo].[T_HouseAttachments]([AttachmentId])
+2020-05-11 21:24:58,899 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,899 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,911 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 11 ms with result: -1
+
+2020-05-11 21:24:58,911 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,911 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE INDEX [IX_HouseId] ON [dbo].[T_HouseAttachments]([HouseId])
+2020-05-11 21:24:58,911 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,911 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,921 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 9 ms with result: -1
+
+2020-05-11 21:24:58,921 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,921 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_AdminLogs] ADD CONSTRAINT [FK_dbo.T_AdminLogs_dbo.T_Users_AdminUserId] FOREIGN KEY ([AdminUserId]) REFERENCES [dbo].[T_Users] ([Id])
+2020-05-11 21:24:58,921 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,922 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,943 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 20 ms with result: -1
+
+2020-05-11 21:24:58,943 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,943 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_Users] ADD CONSTRAINT [FK_dbo.T_Users_dbo.T_Cities_CityId] FOREIGN KEY ([CityId]) REFERENCES [dbo].[T_Cities] ([Id])
+2020-05-11 21:24:58,943 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,943 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,960 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 16 ms with result: -1
+
+2020-05-11 21:24:58,960 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,960 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_AdminUsers] ADD CONSTRAINT [FK_dbo.T_AdminUsers_dbo.T_Cities_CityId] FOREIGN KEY ([CityId]) REFERENCES [dbo].[T_Cities] ([Id])
+2020-05-11 21:24:58,960 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,960 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,980 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 19 ms with result: -1
+
+2020-05-11 21:24:58,980 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,980 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_AdminUsers] ADD CONSTRAINT [FK_dbo.T_AdminUsers_dbo.T_Roles_RoleEntity_Id] FOREIGN KEY ([RoleEntity_Id]) REFERENCES [dbo].[T_Roles] ([Id])
+2020-05-11 21:24:58,980 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,980 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:58,998 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 17 ms with result: -1
+
+2020-05-11 21:24:58,998 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,998 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_Houses] ADD CONSTRAINT [FK_dbo.T_Houses_dbo.T_Communities_CommunityId] FOREIGN KEY ([CommunityId]) REFERENCES [dbo].[T_Communities] ([Id])
+2020-05-11 21:24:58,998 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:58,998 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:58 +08:00
+
+2020-05-11 21:24:59,022 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 23 ms with result: -1
+
+2020-05-11 21:24:59,022 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,023 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_Houses] ADD CONSTRAINT [FK_dbo.T_Houses_dbo.T_IdNames_DecorateStatusId] FOREIGN KEY ([DecorateStatusId]) REFERENCES [dbo].[T_IdNames] ([Id])
+2020-05-11 21:24:59,023 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,023 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:59 +08:00
+
+2020-05-11 21:24:59,047 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 23 ms with result: -1
+
+2020-05-11 21:24:59,047 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,047 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_Houses] ADD CONSTRAINT [FK_dbo.T_Houses_dbo.T_IdNames_RoomTypeId] FOREIGN KEY ([RoomTypeId]) REFERENCES [dbo].[T_IdNames] ([Id])
+2020-05-11 21:24:59,048 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,048 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:59 +08:00
+
+2020-05-11 21:24:59,077 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 29 ms with result: -1
+
+2020-05-11 21:24:59,077 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,077 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_Houses] ADD CONSTRAINT [FK_dbo.T_Houses_dbo.T_IdNames_StatusId] FOREIGN KEY ([StatusId]) REFERENCES [dbo].[T_IdNames] ([Id])
+2020-05-11 21:24:59,077 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,077 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:59 +08:00
+
+2020-05-11 21:24:59,100 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 22 ms with result: -1
+
+2020-05-11 21:24:59,100 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,100 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_Houses] ADD CONSTRAINT [FK_dbo.T_Houses_dbo.T_IdNames_TypeId] FOREIGN KEY ([TypeId]) REFERENCES [dbo].[T_IdNames] ([Id])
+2020-05-11 21:24:59,100 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,100 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:59 +08:00
+
+2020-05-11 21:24:59,123 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 22 ms with result: -1
+
+2020-05-11 21:24:59,123 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,124 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_Communities] ADD CONSTRAINT [FK_dbo.T_Communities_dbo.T_Regions_RegionId] FOREIGN KEY ([RegionId]) REFERENCES [dbo].[T_Regions] ([Id])
+2020-05-11 21:24:59,124 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,124 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:59 +08:00
+
+2020-05-11 21:24:59,144 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 20 ms with result: -1
+
+2020-05-11 21:24:59,144 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,145 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_Regions] ADD CONSTRAINT [FK_dbo.T_Regions_dbo.T_Cities_CityId] FOREIGN KEY ([CityId]) REFERENCES [dbo].[T_Cities] ([Id])
+2020-05-11 21:24:59,145 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,145 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:59 +08:00
+
+2020-05-11 21:24:59,166 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 20 ms with result: -1
+
+2020-05-11 21:24:59,166 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,166 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_HousePics] ADD CONSTRAINT [FK_dbo.T_HousePics_dbo.T_Houses_HouseId] FOREIGN KEY ([HouseId]) REFERENCES [dbo].[T_Houses] ([Id])
+2020-05-11 21:24:59,166 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,166 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:59 +08:00
+
+2020-05-11 21:24:59,189 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 22 ms with result: -1
+
+2020-05-11 21:24:59,189 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,189 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_HouseAppointments] ADD CONSTRAINT [FK_dbo.T_HouseAppointments_dbo.T_AdminUsers_FollowAdminUserId] FOREIGN KEY ([FollowAdminUserId]) REFERENCES [dbo].[T_AdminUsers] ([Id])
+2020-05-11 21:24:59,189 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,189 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:59 +08:00
+
+2020-05-11 21:24:59,212 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 22 ms with result: -1
+
+2020-05-11 21:24:59,213 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,213 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_HouseAppointments] ADD CONSTRAINT [FK_dbo.T_HouseAppointments_dbo.T_Houses_HouseId] FOREIGN KEY ([HouseId]) REFERENCES [dbo].[T_Houses] ([Id])
+2020-05-11 21:24:59,213 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,213 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:59 +08:00
+
+2020-05-11 21:24:59,224 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 11 ms with result: -1
+
+2020-05-11 21:24:59,224 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,224 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_HouseAppointments] ADD CONSTRAINT [FK_dbo.T_HouseAppointments_dbo.T_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [dbo].[T_Users] ([Id])
+2020-05-11 21:24:59,224 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,224 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:59 +08:00
+
+2020-05-11 21:24:59,234 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 10 ms with result: -1
+
+2020-05-11 21:24:59,235 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,235 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_RolePermissions] ADD CONSTRAINT [FK_dbo.T_RolePermissions_dbo.T_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [dbo].[T_Roles] ([Id]) ON DELETE CASCADE
+2020-05-11 21:24:59,235 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,235 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:59 +08:00
+
+2020-05-11 21:24:59,244 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 9 ms with result: -1
+
+2020-05-11 21:24:59,244 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,244 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_RolePermissions] ADD CONSTRAINT [FK_dbo.T_RolePermissions_dbo.T_Permissions_PermissionId] FOREIGN KEY ([PermissionId]) REFERENCES [dbo].[T_Permissions] ([Id]) ON DELETE CASCADE
+2020-05-11 21:24:59,244 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,244 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:59 +08:00
+
+2020-05-11 21:24:59,255 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 10 ms with result: -1
+
+2020-05-11 21:24:59,255 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,255 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_T_AdminUserRoles] ADD CONSTRAINT [FK_dbo.T_T_AdminUserRoles_dbo.T_AdminUsers_AdminUserId] FOREIGN KEY ([AdminUserId]) REFERENCES [dbo].[T_AdminUsers] ([Id]) ON DELETE CASCADE
+2020-05-11 21:24:59,255 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,255 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:59 +08:00
+
+2020-05-11 21:24:59,268 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 12 ms with result: -1
+
+2020-05-11 21:24:59,268 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,268 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_T_AdminUserRoles] ADD CONSTRAINT [FK_dbo.T_T_AdminUserRoles_dbo.T_Roles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [dbo].[T_Roles] ([Id]) ON DELETE CASCADE
+2020-05-11 21:24:59,268 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,268 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:59 +08:00
+
+2020-05-11 21:24:59,279 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 10 ms with result: -1
+
+2020-05-11 21:24:59,279 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,279 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_HouseAttachments] ADD CONSTRAINT [FK_dbo.T_HouseAttachments_dbo.T_Attachments_AttachmentId] FOREIGN KEY ([AttachmentId]) REFERENCES [dbo].[T_Attachments] ([Id]) ON DELETE CASCADE
+2020-05-11 21:24:59,279 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,279 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:59 +08:00
+
+2020-05-11 21:24:59,288 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 8 ms with result: -1
+
+2020-05-11 21:24:59,288 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,288 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：ALTER TABLE [dbo].[T_HouseAttachments] ADD CONSTRAINT [FK_dbo.T_HouseAttachments_dbo.T_Houses_HouseId] FOREIGN KEY ([HouseId]) REFERENCES [dbo].[T_Houses] ([Id]) ON DELETE CASCADE
+2020-05-11 21:24:59,288 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,288 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:59 +08:00
+
+2020-05-11 21:24:59,297 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 8 ms with result: -1
+
+2020-05-11 21:24:59,297 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,297 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：CREATE TABLE [dbo].[__MigrationHistory] (
+    [MigrationId] [nvarchar](150) NOT NULL,
+    [ContextKey] [nvarchar](300) NOT NULL,
+    [Model] [varbinary](max) NOT NULL,
+    [ProductVersion] [nvarchar](32) NOT NULL,
+    CONSTRAINT [PK_dbo.__MigrationHistory] PRIMARY KEY ([MigrationId], [ContextKey])
+)
+2020-05-11 21:24:59,297 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,297 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:59 +08:00
+
+2020-05-11 21:24:59,315 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 17 ms with result: -1
+
+2020-05-11 21:24:59,315 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,315 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：INSERT [dbo].[__MigrationHistory]([MigrationId], [ContextKey], [Model], [ProductVersion])
+VALUES (N'202005111324571_InitialCreate', N'ToBeLifeBetter.Service.SQLDbContext',  0x1F8B0800000000000400ED5D596F1CC7117E0F90FFB0D8A72490B9246507B640DA9097524C4494182E6D244FC470B6B91C788ECDCCAC4C21C82FCB437E52FE427AEEBEEF39965C0892B0D3DDD5DDD55F555F555DFFFBCF7FCF7E788AC2D967906641129FCF4F8E8EE73310FBC93A8837E7F35DFEF0D5B7F31FBEFFFDEFCEDEADA3A7D92F4DBED7453E5832CECEE78F79BE7DB35864FE2388BCEC280AFC34C99287FCC84FA285B74E16A7C7C7DF2D4E4E16009298435AB3D9D9CD2ECE8308943FE0CF6512FB609BEFBCF02A598330ABBFC394554975F6D18B40B6F57C703EBF4D7E041F8207F023C873901EAD40FA39F0C17CF6360C3CD89A15081FE6332F8E93DCCB615BDFFC9C81559E26F166B5851FBCF0F6CB16C07C0F5E9881BA0F6FBAECAADD393E2DBAB3E80A36A4FC5D96279126C193D7357F166471232ECF5BFE410EBE839CCEBF14BD2EB9783E7FBB8E82F843B2A912E633B2CA37CB302DB2F3587D54153CC2E9BC9AB173BF6A4103B155FC79355BEEC27C9782F318ECF2D40B5FCDAE77F761E0FF157CB94D7E05F179BC0B43B40BB013300DFB003F5DA7C916A4F9971BF05077EC723D9F2DF0720BB2605B0C295375F632CEFFFCF57CF61156EEDD87A04508C298559EA4E02F2006A99783F5B557F4332E68809A950B615D5720CBBC0D682A84A88442369F5D794F1F40BCC91F610EEF693E7B1F3C8175F3A56EC4CF7100651216CAD31D6034525C713952500E52796FC5849629803DBF807F6FA1F436B4BADF9AE42EB30B1002C8CA86D28F4912022F9613FAE87D0E36E5A0F0BA3A9FDD80B0CC913D06DB4A2F1090BD4332BF4F93E8260929F1E8F2DCAD925D5A289ADB4492F1D64B3720C7DB7CB6E8E450289D05055BC9EC681CA4522A95D78F490C3EEEA2FB02065CC93C3D960866FD5B5302AEBD2CFB2D49D73F79D9A3A0F6936359F5467AA1A97DE585B94DDF8D2A879213C4EFD234490BDD9139D08AAAF5F1F59744FB41343D7F0DBA2C6586A13C3BAD7257E5E974269144A94A32DD4A4316146C356447E3A021A51AB2F87770F5300D415106653BFB3B59551F267077F0FCA69FA9730AAB06DB797BE4358B59F5EF222F0805F5BEEEA75AE6E46FB4C281655F9FEA2F97BC2CC796301E4654790D3309B56AB4FE203423B50861A5B3376D2ACB1151130B5299521BEB9CFC469619A4ADAC7259AD9A0A12B6735347E3302D4D735A9ABE78B7D0660B5007B13B34672740CC0C9400B173E9CAF93548A3202BE02C6D2C9695D95A2487A8B968362B81EF08D98A3D49E920FC52E1BF00999F06DBEA045FB0443AFDDAC1C9C641D368CED2C672DB08A4446E1BF136DB49E6B9E73F461067D65B4982D2416EA739695FFA496C5BB1E1A666F242FC53B2CB786B6D02DE774D5E64B5CDCE42AFB739F9AC26E09286AD0C23440EE22B15DF651245BBD8C131FD4D924445795B3A6FD7EB1464A2CB8D93D36FFBD02957499C3FDE40AED99D3AACE0B8EC326B2E403563D78E0BE0270524DCB4E716C22D7C1F2649BA4C76B62C2AE95CC66BF06447C705DC2E8214F89245675FB779C9AF45766773C9F211F8BF5EC6CEE87DFA0DC826D97E3853543CEA69B1DA5EC4CD25EBF41714DD54EF7C5541EE0E64AB0FE513D166566336185921DC2139BBE63233504B20762EDD13135C4F4BDB4B6667371ACF256C399155B7F925A9EBC017B41CA6164B2B7444A97633F250E0E066D44547B3549132BBCBC86673932E64709B4997B58A8810234101018623AFC44111F7A49CE3724DDDF0A1114B6BEB079CD06163314D13881BB0814DB75D137E487CCFD539A4EE9236F51E1E02BFF755C78FBB20CCFF01BCD46E053EFDC54B8508A69E2264FAAEC9DA692B760E4A6771B2D95D3E9634ACAF1F112A079D35CDB3CC176E238942943250A012E97B402A8795D85DAE8BFF6DC50EA572103BA9D815F54844AFAFF976A46AA721AF7AE7F2D8CECBF2781EA3759010A984FC9C8AECF77A5B8C3EEEA2FB71AA2E51F2FC67C5FA30C4F5C90973532D3A6231D70A6FB7DB2488731797EF6C7A07ED20D70E0EFC1447D9AE8F7AC8FF4B9005B933E5E04461354779030FC3FB240C93DFF82EAF2AA58D3DC426AFA309EEF0B535A5BAEEA8A284EE9696606B727931A3537C9D9EB1E7224E3ED55EF0E72451DB750745712474D86FEFC3BC82731B1476DB2914237398396D0F7CFA5ADDFEE2853B51BD3D3D6A300D5DCB9389B75996F84139AC8864A30743786BDEC5EB99C497B6E22FEE890B190DC11E6C21BCE1AFF3F99FA86EF209B737921D61D4B516277C4211867201D202985EB8849A0A4A1A5423B41005B11F6CBD50DC06A298A2F415DC6F2B20532EC016C485E088D9AA527373A649D7DE56426805196FCE16083EC4B0E13E59C11B66F9FB15DD78934FC1A88349FAF885125C1DA14AD69801E025E3BA4A13B035EB7860535554627F3B0264662A4BE8ADA7A4B78E8F8E5C826C3CFD25E2F6E49518DBAB8B37EA1217AF6ED8519F46856197D5C000961E76CD3882BAA0283498E947A6C21391A0C9FC5D3AFAB45B992B96B07D67555503E148DB8BFAC1DD704D98AE8310EA2A913B78FC7B45A489D815BC0632B8579243AE1BB9AD1840F372D93B79B5CBB109E10DB5CC4004196FD2124D1D4F12F31245C43A8295B83103604BCC729506744662A3408C6D7DCC1B7C89297237F698EF943AB8C446CCEA0076042F617306409790DD4ADA0BF5A71A1D5F84B5B80A0878A6E34E91C6313A472AC10D717AC71ABB4103038ECD7A9546D0CE5EE3418F75692DC484F0069B801D6184A2893EA1978112C05D424FD09AA1802760BD4A13DA4BCFD1155DEBA9A1A27D68B70DA7CA8D72F8184FAD914D1958A1918C565A9D217EC4A3C34A63DEEC75BE9CCC3C39EAFCA83F2F4E613EAC1BAFAC9D7AD44C13D14A236A245D6D34AA26E239D6720FDF646F7720477CD493391A677C32675E13CCEA4A95DCD84628101A9637446F18068F9AC2A86EBEA37E26EBEED246AF894389AFF278A9348861EF36DEF4C0B3ADD2849078DBD40768C7DE3E495A341E32F7711BC53193D384C4E08A7334FB0985F68C07405D7D38A012AC5A08CBE4B004489B65FADF3E5CDC171FC153CE307E84EDABED1FB3DAF28D844941740572F25AF443B2C9E6B32A5960C343A10E27575DBDD364509049482C833C002C1AE835A08406FAB82BBB4B1A0DAA5F7AA4E8A0D7B21212D83B901421FAD25BD63DF49519BA7FD47A5542AE798386A284CD4EB261AB0FF3396347DE88C8785EDE3B31B98EDDDB49C8549B3516197C1BA7C2A0EAE116368F88A3561572882AE292654C0312D2B551338B2261364D104274102ECDB59EACBC8D915C9CB02DA45A945B9EB65D68B507A55BE556A60891467F90B6D4780F157ACF0FE745B341CD8E12DF1ACA2C29913E115A5AC020A9E5A48CDDA68C52C08ADCFE8FEE8A026A50652FE3CC90F8E13C364EF345C17E0DEB89D8820DE94A3D7309982236555362B21D67B09951C81AAE211BAF432C533653E6B0CCD6105A582F9CCB53DD52B940316CDA8422805BB5D98B146EC126E3B50970E807301898119BB6E143CC356E435BDF2C464458E11AB2F5A15A78CFF1D0CC5031D2C23A2231D3427B83AEF804AC91D864C9196DC020CEB385347F142C8CB85704B48D11D29766512D608CD89E488DD396BC219F481433486422C3ED19C748C69C551C83188460BBEC77C32BE6D3021C4E492D3AE86E896C3A482E559B1019A344B61B52BE5B22AA7B07528C25B6150277D0293B0473FC503607FD21A7AE514DBAB4A4CA99340D2645757D2AD8D0C085234CF48F07EECBBF8C659DCA5DA6D66D26BAB443CF8E446B3BC9CD656F7A44E169000E7A34EF396D6E3AC9DEE3A73932D0A9DF6AF6B503135EA7A9F357697E935DC0B9E6E540F31DEFB50465E69921B25718BA3A296AFCD6DBCB8B36ED6CB1F21F41E4D51FCE16308B0FB6F9CE0BAF923508B326E1CADB6E8B93CCAE64FD65B6DA7A7EB1ADF86A359F3D45619C9DCF1FF37CFB66B1C84AD2D95114F86992250FF9919F440B6F9D2C4E8F8FBF5B9C9C2CA28AC6C2C7B42979D5D2D694C385E60610A9C57A7C0DDE0769563C89E3DD7B85C82CD711950DBBAAE19CDB3655B16E63E8E16B8E749B52CD6B80DCB72E88EB1BFA86ABA6F41EF6B3C041D965406A1D01014862E57BA197325EA65826E12E8AF9B777FCD25720CB20E37112ED47753A98DD024A4B68D0C0A747BE0A819224D3D4A9228F43602CEB3ED3B4CE16C4C851F791145A08E12521A80450DED1A4363091FB377D508A0AF70348ECF52D940C96A0410F8B728C11C452F42956519B5914AB14758A5480619428956842972D48AC740D110D2A7F224C3403B68F9180CA4B17F4FAA8D281A423D7F6FA922E2ADC8FA417FFE2E5AB2F07EC286347788965B684B19A2EA414A68AA4BE661D777384FB79EC5DE405214EAAFE34F41CD0DBFCE7653936C7792CFABC4C073DA4AC8778D7A1DA2A08B1F4D2D73EA2C253553C2F1E3A6263036D0051167EFA309293E8074C587C3F940C967000E790EB2BE408DFC5028BB41735586149494C55D375D1B1B156B45F0FB0548625F7964A1B91A8DDB13E1885A5FBC121F6920936F0A2274EF8F450C76E949CC8E19B4FAD0D138D9F80D61F354E65BBA8CFD8B96CF7599D56E76D8C92E2FB200B7A57867FC6BA567ED199E2C81741F0794EF65E089F32150A1A254C25AAD345A342A324D1EF1AAD64204D1F654874688C7DDD679DAD1719EF19DF7B91A91A924A067EC6A4954C54A7DB05804609765FF5287137FE54E2780BB9173FDFA156792ECE4909171983C3521985A92EC2BA57E6B0C98EFBF61C9F52178E145718CD570DA5D84417C5B462F3519D0E123D14A5847C3E889CFA894E6D20ECE24C07F5233338D511169FAAA01D2EC79CC0B0B10A740043CC0F511F86E2E2FDC0B0E913BD60D485E3E12C884E37D9749756E1AEF6DDB82FABE1F65B42A41F6096E117D1E2E5070D60B7311C3160B75FD529B5AF54A084B84F57F0E91CE04D5935BA8239ED5B6D087505423DC19D61D7A66FD266AF835DDF5213C106518A44D2F002D97872D087565AC737F4A34AD8298EFCCD25196D36FBC8B48322525644EDC30A0EF40FFE1283BEDA91949FEAE6A38EE486C973F5E980433A19B7ADA70D1BAAD2D8CB021A760C58394D7BA9C28D80BAAF10BC4840B34E099E084DF6834B48334C5BC87D7ECA588084CD5A26F13A289F13BBCC8AB87F6DCC3FE57E933E1736D0C11E2DD0C10E56906FEE22B358108F12E3F5060B20B94510E33508C3B67594F45A688D03CE1B13BAD6984D39890AE1DB4031182D7CA5C290CF92072CB580207CF562308CDA2380E790AA6D30D296949985086EE6597C163BB59A22A1A5EA020A622759C3260ADEB8344703E5924766691734F597F677EB9257BBC3617E7A659F0AAFBBB22F59ED9A47FAC75559E633D8F6CFC1BAF48DFB92E5203A2A321CADFE192EC3A0342068325C7931C45D96572195E7A7C727A7F3D9DB30F0B2CAA7B2F6FC7B43BE7FA8E40A78F2BA700504EB684116D777282CA864D91A8BF84C87AC1679D10D111DFA3ED804057BA521A035C31AB72E795535F1672FF51FBDF40F91F7F4476D62988EC6DB4D3D7359DA389CCFFF55167D33BBFCFB1D52FAD5EC530A31F466763CFBB7A3C0CF6BF83B7712F8F93EC80D833E53A8E22DD1F71951D8995155550D2A2CEAF7E9B13E65CC2101072C11C9DC9C78E53F21206ED070CAD540226C55BC73559A2A4857A1D85C236A0B6E55F0A5C82CCFA16D9F65B63A08720BFA3D1A52E171C9B31ED76F0C1465EFFA1D55C13D4E1DAE668EDAB98D4FF4B581F0F4A38BF526166CB22A1BA03BEFF15CE02C27AAD1350B4D8438F3D31E37ACBCFAF029AB38DEF9CD41BB4D0D5BCA432A3E9DDDE781C5EC9985EBFCD3AF7595C70B078DD8CF6B9F41D3C7C0765E64FCD9FD79E3857BE0BBCF50C17CBAF497585D69AB3D2FEA0A66B05E680A5BB5A1F5211369D9D36FF58F153B8F32F3E563E7AFA5CD9EA6A81D734A2F34F3F6D37E67DAFD204958F587725733EF1AEAA6664EC518FD0E908F78B5B93EEC237DDB2CD53BE5D36649AF736973DB71CAB3CDE90E5EB026343A3FDDA33958E815B6CFF3701F28EC7CCEF4E7D4BAA8955EE93CD534362E6ADAB2715D73807EC479CD5C7DEF9108F19DBD9EB5FC98EC4D0EB7402A80E2BB6DED33A03A1730D7CAAB1FAA7B04189953D53EC3A6F4AD723EDDB55E5BAE29B7D659DA3AAE2EF952949C8A77D45EE3D6D454C98195521F6BDFFE765F84DB962566C715C0C6DBCB2DEF192E5FDABDA368D8DCE392AE62FB7EE7AAACB504CE55FBACACFA5941D5FE5B922DE5739BD8545D5CD4F0C235FDA7B35E0BBC45E4206B2A32B22EB0D49A78CBB55B8016D76887A909979DB983D8D7441500F2F19C86BDF470A832BEA5B6BC8594788CD00538FE1B0A238AD5A43FA44871AB311D7285C51B55C49F05596FD7464E74545F34DE6C77D65D77A08A848B7CBEDA8579B00D031FFE82531FC50F56C0798C18FA1927F6278A180406488B69DB0B97499CE5A917D0DEC2D76910FBC1D60BE94E105915171D05675BA264CA05D882B8584AD0BD54A98DF764D4D9A2254C205FC603CC7F490C035E847B2E1EB487508407C29307254826F5820BCD91B2C485347C98EEEC3718407A5316C74747527C701047A53D03CD218FCE3231F5C17E0381379CC84A101D49F4F39EC14318CB6212F0903EFC302C4AAE250F11D8A0E5847283FE1457FBD6D95BBFF2675D7A99EFADE9255BE10A2C6F07B54165B78BCEF60CB0A7FE1285DEBE7C44FCB1FCCA9171178EB66C8C5F18168D30312E2245C73F23ADADF86F73B899F47A0225FFBC47D036BE1A77044993C9D2EDFCACA9A0A7B7D6E7BFC532C1697A9A281C7581A859F9B87334621536E08914668C86E1174B78067B4BC913ED13DB581276B6B53D285F09990CA30817A49D2F863432AD1FCDA13B5E96F89047CC60680C6E50894140825C45749E407CBD613EA422A4A0F7212849EC7B3FFAC360C42C41228E25C6D021A2885D836304F7E0E10205B3274587144FD807884802228C8E0F7938B0E14082198456776F5C88188CA81420B8412A459548EE052EBAC3E7022DB20809CA37C2232894C6F3F3A04AC65725A2688E8303E330C34C05165398596A501C34C5342031AA96D07987173DDD22DF0AC10EB5A8C4614EDC049661A2E6F58F408520DCEECFDED49F67661FFF4A9E521E119B921360A3C5F00B43E4C02B6B5B304E60894DF93A912E197DDC90490C4E384E5814E819599ECB1D9772B82FBA6685484C63C26BF81DFF849034C6CEDF0C4593544DC399CC4E0D387BA37D06543955ABDAD810ED593811C781024C516A0572A669F67C56FD2F3091AEE2429CCFD7F709C443E523707BD7E4A262EA5115A280A42A4313D91555B69FB24AD06B5AAA1234915DC9B28A102FAB859AE6D9CC93770A8DEC25A913B525A0AA4313D93595C616D24A687B2EAA2A3A0BBBC26B34F0948C9FD40E9366289585C3D1369FBC5A6C72A56AC452D99535B17464A024AFFF6864923938F0ACB3A96014BF9AA611832573305347709755859F215155E1C9ECAA9A28DD4A4346DC55B0478EC82418C03222B352C58C598F5D3923A3A00158CC5C5943709F67BA7E229D5D6D1B21535DEB28A8065166BE56D252147CFB2A990A96AB48441DAB694BE13E5FAAC154F58B48A3E181A438BE7733241735DD328CA1B005213DA196D1C2D0CFD49287BD36454AA39FC9F317BC4B0ADDE5FA9831FAADE68F66D705FAB0805A657561F79024378C50187CB9CF95430470964ACCD8A5F62C603B0C3178A0E059847583D6344400CD693281E10F236686CC81C62153E4538B2C46696FACAA4FA4D559C58E2128F4F640BA28EBD8E4D826F42C50D0387C4F04576223A2C381AD20574F0CE3C34C276C695F5A6A0436D156DA2C11149B723B9CBB585BA88AA1588275B739D6C88CBEABD82DDB770167217BF35AF1914CB36605DBE696C10905E35C57DDE01FD42334B0EF4ED94098954A78213242C53AC2DAB4973DC113A6C10A96F1248F1152434BDB4ED0E59907121D1922D9293A5A1B41092ED8B684FB8B88BA5B6A42F1BC84A1EE94CAA83F9311975835B116505AF1C8859650E8DA874A142DA7E4A743D2C0EBFDB14EB0F6D48A93EE50954E83618AD6213CC1D3B42BE965BF233EABEEC68491A52FF689A76C256B09F7D3F6B458A409AB5E8F2D87604FF3985C7B91DDA69D2DAAE3F0FA03FC99C335ED065C256B1066E5D7B3C5CD2E2E1E1BAD7E5D802CD87424CE20CDB88AF9D3116DF25CC60F49737F4FB4A8C94286B802B9B7F672EF6D9A070F9E9FC3641F6459106FE6B3F255D52232EC3D585FC69F76F97697C32E83E83EC49851D80188EA3F5B506D3EFB54C6C0C95C7401363328DE67FD1417F140D66DBBDF331EF9E390280C0CEA476E8BB1CC8B5DC6E64B4BE963122B12AAD9D7DA45DC82681B4262D9A778E57D06266D83B0FE00369EFF057EFF1CAC0B41E211910F04CEF6B38BC0DBA45E94D534BAF2F027C4F03A7AFAFEFFBDC83B933E3F0100 , N'6.1.3-40302')
+
+2020-05-11 21:24:59,315 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Executing at 2020-05-11 21:24:59 +08:00
+
+2020-05-11 21:24:59,328 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：-- Completed in 13 ms with result: 1
+
+2020-05-11 21:24:59,328 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：
+
+2020-05-11 21:24:59,336 [1] DEBUG ToBeLifeBetter.LogEasy.LogHelper - EF执行SQL：Committed transaction at 2020-05-11 21:24:59 +08:00
+

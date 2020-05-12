@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ToBeLifeBetter.IService;
 using ToBeLifeBetter.Service.Entity;
 
 namespace ToBeLifeBetter.Service
 {
     //公共Service类
-    class BaseService<T> where T:BaseEntity
+    class BaseService<T>:IServiceAutoFac where T:BaseEntity
     {
         private SQLDbContext db;
         public BaseService(SQLDbContext db)

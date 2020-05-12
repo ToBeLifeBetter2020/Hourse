@@ -7,6 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using ToBeLifeBetter.LogEasy;
 using ToBeLifeBetter.Service.Entity;
 
 namespace ToBeLifeBetter.Service
@@ -14,15 +15,16 @@ namespace ToBeLifeBetter.Service
     public class SQLDbContext : DbContext
     {
         //ILog ILogger,
-        private static ILog log = ToBeLifeBetter.LogEasy.LogHelper.logger;//LogManager.GetLogger(typeof(SQLDbContext));
+        //private static ILog log = ToBeLifeBetter.LogEasy.;//LogManager.GetLogger(typeof(SQLDbContext));
 
 
-        public SQLDbContext():base("name=connstr")
+        public SQLDbContext():base("name=conStr")
             //name=conn1表示使用连接字符串中名字为conn1的去连接数据库
         {
             Database.SetInitializer<SQLDbContext>(null);
             this.Database.Log = (sql) => {
-                log.DebugFormat("EF执行SQL：{0}", sql);
+                //LogHelper.Info("EF执行SQL：{0}");
+                ToBeLifeBetter.LogEasy.LogHelper.Debug("EF执行SQL：{0}",sql);
             };        
         }
 
